@@ -1,0 +1,33 @@
+:root{
+    --body-color: #404040;
+    --accent-color: #FFE600;
+    --black: #000000;
+    --white: #ffffff;
+    --footer-bg: #EBEBEB;
+}
+
+* {box-sizing: border-box;}
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: var(--body-color);
+    line-height: 1.6;
+}
+
+h1, h2, strong{
+    font-weight: 700;
+}
+
+
+/* 
+Hero
+*/
+
+.hero{
+    display: grid;
+    background-image: url(../images/hero-bg.jpg);
+    background-color: #000000;
+    color: #fff
+}
