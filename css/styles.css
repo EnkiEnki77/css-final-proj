@@ -16,8 +16,239 @@ body{
     line-height: 1.6;
 }
 
-h1, h2, strong{
+h1, h2, strong, .btn{
     font-weight: 700;
+}
+
+.hero, .info, footer{
+    padding: 4em 0;
+}
+
+.info, footer{
+    text-align: center;
+}
+
+/* 
+Typogrophy
+*/
+
+.accent-color{
+    color: var(--accent-color);
+}
+
+.hero-title{
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.subtitle{
+    margin-top: 0;
+}
+
+.section-title{
+    font-size: 1.125rem;
+    color: var(--black);
+}
+
+/* 
+General layout
+*/
+
+.main-grid{
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
+    grid-gap: 0 2em;
+}
+
+.main-grid > *{
+    grid-column: 2 / -2;
+}
+
+@media (min-width: 600px){
+    .main-grid{
+        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(180px, 320px)) minmax(1em, 1fr);
+    }
+}
+
+/* 
+Nav
+*/
+
+header{
+    background: var(--black);
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 0 2em;
+    margin: 0;
+    height: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.nav-link{
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.nav-link:hover, .nav-link:focus{
+    color: var(--accent-color);
+}
+
+.logo-link{
+    background-color: var(--accent-color);
+    padding-top: 2em;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    background: black;
+    transform: translate(0);
+    transition: transform .5s;
+}
+
+.nav-open{
+    transform: translate(-100%);
+}
+
+.close-btn{
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 3rem;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    padding: .5em;
+}
+
+.open-btn{
+    border:0;
+    background: 0;
+    cursor: pointer;
+    margin-left: auto;
+    color: #fff;
+    padding: .5em 0;
+    font-size: 1.5rem;
+}
+
+.close-btn:hover, .close-btn:focus, .open-btn:hover, .open-btn:focus{
+    color: var(--accent-color);
+}
+
+
+
+@media (min-width: 600px){
+    .open-btn, .close-btn{
+        display: none;
+    }
+
+    nav{
+        position: initial;
+    }
+
+    .header-nav-list{
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2em;
+    }
+
+    .nav-link{
+        font-size: 1rem;
+    }
+
+    .header-home{
+        background-color: transparent;
+        position: absolute;
+        width: 100%;
+    }
+    
+    .header-home nav{
+        background-color: transparent;
+    }
+}
+
+
+/* 
+Footer
+*/
+
+footer{
+    background-color: var(--footer-bg);
+}
+
+.footer-logo{
+    justify-self: center;
+}
+
+.social-links{
+    order: -1;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.footer-logo, .footer-body, .copyright{
+    opacity: 0.4;
+}
+
+.footer-body{
+    margin-top: 0;
+}
+
+.copyright{
+    font-size: .75rem;
+    margin-top: 3em;
+}
+
+@media (min-width: 600px){
+    .footer-content{
+        text-align: left;
+        grid-column: 2 / span 2;
+    }
+
+    .social-links{
+        grid-column: span 1;
+        order: 2;
+    }
+}
+
+/* 
+Buttons
+*/
+
+.btn{
+    padding: .5em 1.75em;
+  
+}
+
+.btn-primary{
+    background-color: var(--accent-color);
+    color: var(--black);
+    justify-self: start;
+    margin-top: .5em;
 }
 
 
@@ -26,8 +257,41 @@ Hero
 */
 
 .hero{
-    display: grid;
     background-image: url(../images/hero-bg.jpg);
     background-color: #000000;
-    color: #fff
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    padding: 6em 0;
 }
+
+.hero > *{
+    margin-right: 20%;
+}
+
+@media (min-width: 600px){
+    .hero{
+        padding: 10em 0 6em;
+    }
+
+    .hero > *{
+        grid-column: 2 / span 2;
+    }
+
+}
+
+
+/* 
+Info section
+*/
+
+@media (min-width: 600px){
+    .info > *{
+        grid-column: span 1;
+    }
+
+    .info-article:first-child{
+        grid-column: 2 / span 1;
+    }
+}
+

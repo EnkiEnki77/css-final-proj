@@ -8,27 +8,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <header>
-        <a href="" class="logo-link">
-            <img src="images/logo.png" alt="Site logo">
-        </a>
-        <nav class="header-nav">
-            <ul class="header-nav-list">
-                <li class="header-nav-list-item current-page"><a href="index.html" class="nav-link">home</a></li>
-                <li class="header-nav-list-item"><a href="about.html" class="nav-link">about</a></li>
-                <li class="header-nav-list-item"><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
+    <header class="header-home main-grid">
+        <div class="header-content">
+            <a href="" class="logo-link">
+                <img src="images/logo.png" alt="Site logo">
+            </a>
+            <button aria-label="Button to open navigation" class="open-btn">&#9776;</button>
+            <nav class="header-nav">
+                <button aria-label="Button to close navigation" class="close-btn">&times;</button>
+                <ul class="header-nav-list">
+                    <li class="header-nav-list-item "><a href="index.html" class="nav-link current-page">home</a></li>
+                    <li class="header-nav-list-item"><a href="about.html" class="nav-link">about</a></li>
+                    <li class="header-nav-list-item"><a href="contact.html" class="nav-link">contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <section class="hero">
-            <h1 class="hero-title">The only marketing agency on <span class="accent-color">a mission from God</a>, fully dedicated to increase your web traffic. </h1>
+        <section class="hero main-grid">
+            <h1 class="hero-title">The only marketing agency on <span class="accent-color">a mission from God</span>, fully dedicated to increase your web traffic. </h1>
             <p class="subtitle">We’re two brothers from Chicago that are trying to pay back our debt. We can help you with SEO, SEM content marketing and whatever else.</p>
             <a class="btn btn-primary">contact</a>
         </section>
-        <section class="info">
+        <section class="info main-grid">
             <article class="info-article">
                 <h2 class="info-article-title">About Us</h2>
                 <p class="info-article-body">We grew up in downtown Chicago, and we used to play in a band. Jake loves fried chicken, and Elwood loves dry white toast.</p>
@@ -43,15 +48,19 @@
             </article>
         </section>
     </main>
-    <footer>
-        <img src="./images/logo.png" alt="" class="footer-logo">
-        <p class="footer-body">Two brothers from Chicago that are just trying to pay back their debt by helping others with their SEO, SEM, and Content Marketing needs.</p>
-        <p class="copyright">© Jake&Elwood 2019</p>
+    <footer class="main-grid">
+        <div class="footer-content">
+            <img src="./images/logo.png" alt="" class="footer-logo">
+            <p class="footer-body">Two brothers from Chicago that are just trying to pay back their debt by helping others with their SEO, SEM, and Content Marketing needs.</p>
+            <p class="copyright">© Jake&Elwood 2019</p>
+        </div>
         <ul class="social-links">
-            <li class="social-link"><a href=""></a></li>
-            <li class="social-link"><a href=""></a></li>
-            <li class="social-link"><a href=""></a></li>
+            <li class="social-link"><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+            <li class="social-link"><a href=""><i style="color: aqua;" class="fa-brands fa-x-twitter"></i></a></li>
+            <li class="social-link"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
         </ul>
     </footer>
+    <script src="https://kit.fontawesome.com/8fde745559.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
